@@ -1,0 +1,19 @@
+.stats{
+    padding:70px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:30px;
+    text-align:center;
+    background:#d4a017;
+    color:white;
+    }
+    
+    .stat h2{
+    font-size:42px;
+    margin-bottom:10px;
+    font-weight:700;
+    }
+    
+    .stat p{
+    font-size:18px;
+    }
