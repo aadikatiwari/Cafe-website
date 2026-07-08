@@ -1,6 +1,6 @@
 import { useState } from "react";
 import API from "../../api/api";
-import "./Reservation.css";
+import "./Reservations.css";
 
 export default function Reservation() {
   const [form, setForm] = useState({
