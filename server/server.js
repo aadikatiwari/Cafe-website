@@ -7,7 +7,7 @@ import contactRoutes from "./routes/contactRoutes.js";
 import newsletterRoutes from "./routes/newsletterRoutes.js";
 
 import connectDB from "./config/db.js";
-
+import adminRoutes from "./routes/adminRoutes.js";
 dotenv.config();
 
 connectDB();
@@ -23,6 +23,8 @@ app.use("/api/reservations", reservationRoutes);
 app.use("/api/contact", contactRoutes);
 
 app.use("/api/newsletter", newsletterRoutes);
+
+app.use("/api/admin", adminRoutes);
 
 app.get("/", (req, res) => {
   res.send("Cafe Backend Running...");

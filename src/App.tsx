@@ -31,7 +31,7 @@ function App() {
 }
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
+import Home from "./Pages/Home";
 
 import AdminLogin from "./Pages/AdminLogin";
 
@@ -45,7 +45,7 @@ function App() {
 
       <Routes>
 
-        
+        <Route path="/" element={<Home />} />
 
         <Route path="/admin" element={<AdminLogin />} />
 

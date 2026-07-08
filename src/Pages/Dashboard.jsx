@@ -1,65 +1,57 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import API from "../api/api";
 import "./Admin.css";
 
 export default function Dashboard() {
+
+  const [stats, setStats] = useState({
+    reservations: 0,
+    contacts: 0,
+    subscribers: 0,
+    menuItems: 0,
+  });
+
+  useEffect(() => {
+    loadStats();
+  }, []);
+
+  const loadStats = async () => {
+    try {
+      const res = await API.get("/admin/stats");
+      setStats(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="dashboard">
 
-      <aside className="sidebar">
+      <h1>Admin Dashboard</h1>
 
-        <h2>Brew Haven</h2>
+      <div className="cards">
 
-        <Link to="/dashboard">
-          Dashboard
-        </Link>
-
-        <Link to="/reservations">
-          Reservations
-        </Link>
-
-        <Link to="/contacts">
-          Contacts
-        </Link>
-
-        <Link to="/newsletter">
-          Subscribers
-        </Link>
-
-        <Link to="/menu-manager">
-          Menu
-        </Link>
-
-      </aside>
-
-      <main className="content">
-
-        <h1>Dashboard</h1>
-
-        <div className="cards">
-
-          <div className="card">
-            <h2>120</h2>
-            <p>Reservations</p>
-          </div>
-
-          <div className="card">
-            <h2>45</h2>
-            <p>Messages</p>
-          </div>
-
-          <div className="card">
-            <h2>560</h2>
-            <p>Subscribers</p>
-          </div>
-
-          <div className="card">
-            <h2>35</h2>
-            <p>Menu Items</p>
-          </div>
-
+        <div className="card">
+          <h2>{stats.reservations}</h2>
+          <p>Reservations</p>
         </div>
 
-      </main>
+        <div className="card">
+          <h2>{stats.contacts}</h2>
+          <p>Messages</p>
+        </div>
+
+        <div className="card">
+          <h2>{stats.subscribers}</h2>
+          <p>Subscribers</p>
+        </div>
+
+        <div className="card">
+          <h2>{stats.menuItems}</h2>
+          <p>Menu Items</p>
+        </div>
+
+      </div>
 
     </div>
   );
