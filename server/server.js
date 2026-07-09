@@ -9,6 +9,7 @@ import newsletterRoutes from "./routes/newsletterRoutes.js";
 import connectDB from "./config/db.js";
 import adminRoutes from "./routes/adminRoutes.js";
 dotenv.config();
+console.log("MONGO_URI:", process.env.MONGO_URI);
 
 connectDB();
 
