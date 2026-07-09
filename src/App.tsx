@@ -10,6 +10,13 @@ import Reservation from "./Components/Reservations/Reservations";
 import Contact from "./Components/Contact/Contact";
 import Newsletter from "./Components/Newsletter/Newsletter";
 import Footer from "./Components/Footer/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./Pages/Home";
+
+import AdminLogin from "./Pages/AdminLogin";
+
+import Dashboard from "./Pages/Dashboard";
 
 function App() {
   return (
@@ -26,22 +33,7 @@ function App() {
       <Contact />
       <Newsletter />
       <Footer />
-    </>
-  );
-}
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Home from "./Pages/Home";
-
-import AdminLogin from "./Pages/AdminLogin";
-
-import Dashboard from "./Pages/Dashboard";
-
-function App() {
-
-  return (
-
-    <BrowserRouter>
+      <BrowserRouter>
 
       <Routes>
 
@@ -55,8 +47,13 @@ function App() {
 
     </BrowserRouter>
 
+    </>
   );
-
 }
+
+
+  
+
+
 
 export default App;
