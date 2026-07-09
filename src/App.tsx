@@ -33,7 +33,7 @@ function App() {
       <Contact />
       <Newsletter />
       <Footer />
-      
+      <BrowserRouter>
 
       <Routes>
 
@@ -45,7 +45,7 @@ function App() {
 
       </Routes>
 
-    
+    </BrowserRouter>
 
     </>
   );

@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className={sticky ? "navbar active" : "navbar"}>
       <div className="logo">
         <FaCoffee className="logo-icon" />
-        <span>Brew Haven</span>
+        <span>The Cozy Cup</span>
       </div>
 
       <ul className={menu ? "nav-links active" : "nav-links"}>

@@ -11,7 +11,7 @@ const Hero = () => {
         <h3>Freshly Brewed Every Day</h3>
 
         <h1>
-          Welcome to <span>Brew Haven Café</span>
+          Welcome to <span>The Cozy Cup</span>
         </h1>
 
         <p>
